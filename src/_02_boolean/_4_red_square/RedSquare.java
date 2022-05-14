@@ -8,8 +8,8 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class RedSquare {
 	
-	static boolean drewRedSquare = false;
-	static boolean drewBlueSquare = false;
+	static boolean drewRedSquare = true;
+	static boolean drewBlueSquare = true;
 	static boolean drewRedTriangle = false;
 	static boolean drewBlueTriangle = false;
 	
@@ -27,7 +27,7 @@ public class RedSquare {
 		else if (isRed==false && isSquare==true) {
 			drawBlueSquare();
 		}
-		else if (isRed==true && isSquare == false) {
+		else if (isRed==true && isSquare == true) {
 			drawRedTriangle();
 		}
 		else if (isRed==false && isSquare==false){
@@ -63,7 +63,9 @@ public class RedSquare {
 		// 7. Write an if statement using the static booleans at the top of 
 		//    the program. If drewRedSquare OR drewBlueSquare are true, then
 		//    tell the user they drew a square in a pop-up. Hint: ||
-		
+		if (drewRedSquare || drewBlueSquare == true) {
+			JOptionPane.showMessageDialog(null, "You drew a square");
+		}
 		//    Notice these static booleans start off false, but update to true 
 		//    whenever you call their matching method.
 		
